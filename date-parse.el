@@ -115,6 +115,7 @@ the field string to yield the appropriate integer value.")
 ;;; ............................................................ &code ...
 
 ;; FIXME: Yuck. We only default the year.
+;;;###autoload
 (defun date-parse-default-date-list (date)
   "Return DATE list."
   (let ((now nil))
@@ -130,6 +131,7 @@ the field string to yield the appropriate integer value.")
           (setnth 0 date year)))
     date))
 
+;;;###autoload
 (defun date-parse (date &optional exactp nodefault)
   "Parse a DATE into a 3-list of year, month, day.
 This list may be extended by the weekday,
@@ -217,6 +219,7 @@ to the 2-list holding the location of the date within the string."
 
 ;; Date field parsers:
 
+;;;###autoload
 (defun date-parse-month (month)
   "Parse MONTH."
   (if (not (stringp month))
@@ -252,6 +255,7 @@ to the 2-list holding the location of the date within the string."
             (set sym try)))
       (symbol-value sym))))
 
+;;;###autoload
 (defun date-parse-year (year)
   "Parse YEAR."
   (if (not (stringp year))
@@ -265,6 +269,7 @@ to the 2-list holding the location of the date within the string."
 
 ;; Other functions:
 
+;;;###autoload
 (defun date-parse-compare-key (date &optional integer-p)
   "Map DATE to strings preserving ordering.
 If optional INTEGER-P is true, yield an integer instead of a string.
@@ -308,6 +313,7 @@ and years must be in this century."
         (setq hour (+ hour ?A))
         (format fmt year month day hour minute second)))))
 
+;;;###autoload
 (defun date-parse-lessp (date1 date2)
   "Compare DATE1 to DATE2 (which may be unparsed strings or parsed date lists).
 Equivalent to (string< (date-parse-compare-key date1) (date-parse-compare-key date2))."
@@ -327,6 +333,7 @@ Equivalent to (string< (date-parse-compare-key date1) (date-parse-compare-key da
       (funcall check (nth 6 date1) (nth 6 date2))
       nil)))
 
+;;;###autoload
 (defun date-parse-sort-fields (reverse beg end)
   "Sort lines in region by date value; argument means descending order.
 Called from a program, there are three required arguments:
