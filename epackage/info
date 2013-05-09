@@ -1,0 +1,18 @@
+Package: lib-date-parse
+Section: extensions
+License: GPL-2+
+Depends: emacs (>= 22)
+Status: unmaintained stable
+Maintainer: Jari Aalto <jari.aalto@cante.net>
+Bugs:
+Upstream: John Rose (unreachable) <rose@think.com>
+Upstream-Bugs:
+Vcs-Type:
+Vcs-Url:
+Vcs-Browser:
+Homepage:
+Wiki:
+Commentary:
+Description: Parse and sort dates
+ Low level function to parse and sort dates.
+ The original code is from 1989 and Author is longer reachable.

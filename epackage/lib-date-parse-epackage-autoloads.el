@@ -1,0 +1,8 @@
+(autoload 'date-parse-default-date-list         "date-parse" "" nil)
+(autoload 'date-parse                           "date-parse" "" nil)
+(autoload 'date-parse-month                     "date-parse" "" nil)
+(autoload 'date-parse-year                      "date-parse" "" nil)
+(autoload 'date-parse-compare-key               "date-parse" "" nil)
+(autoload 'date-parse-lessp                     "date-parse" "" nil)
+(autoload 'date-parse-sort-fields               "date-parse" "" t)
+(provide 'lib-date-parse-epackage-autoloads)
